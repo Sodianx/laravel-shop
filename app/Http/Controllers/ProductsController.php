@@ -88,4 +88,14 @@ public function disfavor(Product $product, Request $request)
         return [];
     }
 
+
+
+
+     public function favorites(Request $request)
+    {
+        $products = $request->user()->favoriteProducts()->paginate(16);
+
+        return view('products.favorites', ['products' => $products]);
+    }
+
 }
