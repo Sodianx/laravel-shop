@@ -50,6 +50,8 @@ Route::delete('user_addresses/{user_address}', 'UserAddressesController@destroy'
          Route::get('payment/alipay/return', 'PaymentController@alipayReturn')->name('payment.alipay.return');
 
          Route::get('payment/{order}/wechat', 'PaymentController@payByWechat')->name('payment.wechat');
+
+         Route::post('orders/{order}/received', 'OrdersController@received')->name('orders.received');
     });
 
  
