@@ -57,6 +57,8 @@ Route::delete('user_addresses/{user_address}', 'UserAddressesController@destroy'
         Route::post('orders/{order}/review', 'OrdersController@sendReview')->name('orders.review.store');
 
          Route::post('orders/{order}/apply_refund', 'OrdersController@applyRefund')->name('orders.apply_refund');
+
+         Route::get('coupon_codes/{code}', 'CouponCodesController@show')->name('coupon_codes.show');
     });
 
  
